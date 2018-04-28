@@ -20,7 +20,8 @@ public class CervejasController {
 	}
 	
 	@RequestMapping(value="/cervejas/novo", method=RequestMethod.POST)
-	public String cadastrar(@Valid Cerveja cerveja, BindingResult result, Model model, RedirectAttributes attributes) {
+	public String cadastrar(@Valid Cerveja cerveja, BindingResult result, 
+			Model model, RedirectAttributes attributes) {
 		if (result.hasErrors()) {
 			model.addAttribute("mensagem", "Erro no formulário");
 			return "cerveja/CadastroCerveja";
