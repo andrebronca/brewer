@@ -15,8 +15,7 @@ import com.algaworks.brewer.model.Cerveja;
 public class CervejasController {
 
 	@RequestMapping("/cervejas/novo")
-	public String novo(Model model) {
-		model.addAttribute(new Cerveja());
+	public String novo(Cerveja cerveja) {
 		return "cerveja/CadastroCerveja";
 	}
 	
@@ -26,8 +25,7 @@ public class CervejasController {
 			Model model, 
 			RedirectAttributes attributes) {
 		if (result.hasErrors()) {
-			model.addAttribute(cerveja);
-			return "cerveja/CadastroCerveja";
+			return novo(cerveja);
 		}
 
 		attributes.addFlashAttribute("mensagem", "tudo certo");
