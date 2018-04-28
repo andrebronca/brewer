@@ -26,6 +26,7 @@ public class CervejasController {
 			Model model, 
 			RedirectAttributes attributes) {
 		if (result.hasErrors()) {
+			model.addAttribute(cerveja);
 			return "cerveja/CadastroCerveja";
 		}
 
