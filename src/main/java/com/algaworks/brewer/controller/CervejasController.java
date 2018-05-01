@@ -20,12 +20,9 @@ public class CervejasController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(CervejasController.class);
 	
-	@Autowired
-	private Cervejas cervejas;
 
 	@RequestMapping("/cervejas/novo")
 	public String novo(Cerveja cerveja) {
-		cervejas.findAll();
 		
 		if (logger.isDebugEnabled()) {
 			logger.debug("Objeto cerveja: "+ cerveja);
