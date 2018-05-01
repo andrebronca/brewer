@@ -60,7 +60,17 @@
   			<version>${flyway-maven-plugin.version}</version>
   			<configuration>
   				<driver>com.mysql.cj.jdbc.Driver</driver>
+  				<url>jdbc:mysql://localhost:3306/brewer</url>
+  				<user>root</user>
+  				<password>mysqlroot</password>
   			</configuration>
+  			<dependencies>
+  				<dependency>
+  					<groupId>mysql</groupId>
+  					<artifactId>mysql-connector-java</artifactId>
+  					<version>${mysql-connector-java.version}</version>
+  				</dependency>
+  			</dependencies>
   		</plugin>
   	</plugins>
   </build>
