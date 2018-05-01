@@ -44,7 +44,7 @@ public class Cerveja implements Serializable{
 	
 	private BigDecimal comissao;
 	
-	@Column(name = "quantiddade_estoque")
+	@Column(name = "quantidade_estoque")
 	private Integer quantidadeEstoque;
 	
 	@Enumerated(EnumType.STRING)
